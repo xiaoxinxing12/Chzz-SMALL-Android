@@ -1,0 +1,48 @@
+<resources>
+
+    <string name="app_name">main</string>
+    <string name="strPoint">小圆点</string>
+
+
+    <string name="ac_index">我的</string>
+    <string name="ac_transactions">评分</string>
+    <string name="ac_financing">设置</string>
+    <string name="ac_user">我</string>
+    <string name="str_turn_back">取消</string>
+    <string name="str_forward">前进</string>
+    <!--通用String-->
+    <string name="common_back">返回</string>
+    <string name="bt_submit">提交</string>
+    <string name="bt_enter">确定</string>
+    <string name="bt_next">下一步</string>
+    <!--首页String-->
+    <string name="bt_buy">立刻抢购</string>
+
+
+    <!--  ************************************人个中心******************************************-->
+    <string name="tv_usercenter">设置</string>
+
+    <!--登录页-->
+    <string name="user_login_name">账号/手机号</string>
+    <string name="user_login_pwd">密码</string>
+
+    <string name="login">记住密码</string>
+    <string name="cb_getpwd">自动登录</string>
+
+    <!--  ************************************人个中心结束******************************************-->
+
+    <string name="gridview_demo">GridViewDemo</string>
+    <string name="normal_listview_demo">NormalListViewDemo</string>
+    <string name="normal_recyclerview_demo">NormalRecyclerViewDemo</string>
+    <string name="swipe_listview_demo">SwipeListViewDemo</string>
+    <string name="swipe_recyclerview_demo">SwipeRecyclerViewDemo</string>
+    <string name="staggeredgrid_demo">StaggeredGridDemo</string>
+    <string name="scrollview_demo">ScrollViewDemo</string>
+    <string name="normalview_demo">NormalViewDemo</string>
+    <string name="webview_demo">WebViewDemo</string>
+    <string name="sticky_nav_demo">StickyNavDemo</string>
+
+    <string name="test_custom_header_title">我是标题标我是标题标我是标题标我是标题标我是标题标我是标题标</string>
+    <string name="test_custom_header_desc">我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述</string>
+    <string name="title_activity_main2">Main2Activity</string>
+</resources>
