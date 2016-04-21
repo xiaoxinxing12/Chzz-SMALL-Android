@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
-<TextView
-    android:text="hello index"
-    android:textColor="@color/black"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content" />
-</LinearLayout>
+<org.chzz.refresh.CHZZRefreshLayout android:id="@+id/rl_listview_refresh"
+                                    style="@style/MatchMatch"
+                                    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ListView
+        android:id="@+id/lv_listview_data"
+        style="@style/MatchAuto"
+        android:divider="@mipmap/list_divider"
+        android:overScrollMode="never"
+        android:padding="5dp"
+        android:scrollbars="none"/>
+</org.chzz.refresh.CHZZRefreshLayout>
