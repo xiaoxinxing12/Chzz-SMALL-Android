@@ -34,7 +34,7 @@ public class RefreshMainActivity extends BaseActivity implements CHZZRefreshLayo
 
     @Override
     protected void initView(Bundle savedInstanceState) {
-        setContentView(R.layout.activity_sample_refresh_main);
+        setContentView(R.layout.sample_activity_refresh_main);
         mRefreshLayout = getViewById(R.id.rl_recyclerview_refresh);
         mDataRv = getViewById(R.id.rv_recyclerview_data);
     }

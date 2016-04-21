@@ -3,8 +3,6 @@ package org.chzz.app.main;
 import android.app.Application;
 import android.util.Log;
 
-import org.xutils.x;
-
 
 /**
  * Created by Administrator on 2016/2/17.
@@ -19,7 +17,7 @@ public class AppContext extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        x.Ext.init(this);
+    //    x.Ext.init(this);
         sInstance = this;
 
     }

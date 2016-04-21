@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
+import android.view.Menu;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -39,6 +41,8 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
     private SweetAlertDialog mLoadingDialog;
     protected AppContext mApp;
     protected String TAG;
+    //标题栏
+    protected Toolbar mToolbar;
     //临听
     protected FillDataListener mFillDataListener;
     //是否开始一体化
@@ -50,16 +54,18 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
     protected RecyclerView mDataRv;
     //布局
     protected CHZZRefreshLayout mRefreshLayout;
-
+    protected Toolbar.OnMenuItemClickListener onMenuItemClick ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mApp = AppContext.getInstance();
+        mToolbarTop = getViewById(R.id.toolbar_top);
+
         initView(savedInstanceState);
         setListener();
         onUserVisible();
         processLogic(savedInstanceState);
-        mToolbarTop = getViewById(R.id.toolbar_top);
+
         initTranslucentStatus();
     }
 
@@ -164,5 +170,12 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
         }
         win.setAttributes(winParams);
     }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+
 
 }

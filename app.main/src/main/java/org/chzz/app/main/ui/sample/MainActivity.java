@@ -23,7 +23,7 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected void initView(Bundle savedInstanceState) {
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.sample_activity_main);
         mUpdate = getViewById(R.id.but);
         mChzzRefresh = getViewById(R.id.tv_chzzRefresh);
 
