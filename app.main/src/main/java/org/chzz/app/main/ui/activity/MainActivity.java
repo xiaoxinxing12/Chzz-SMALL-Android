@@ -21,11 +21,12 @@ import java.util.ArrayList;
 
 public class MainActivity extends BaseViewPageActivity {
     //标题
-    private String[] mTitles = {"首页", "热上", "分类", "我的"};
+    private String[] mTitles = {"首页", "热门", "分类", "我的"};
+    private int[] mLogo = {R.mipmap.logo_index, R.mipmap.logo_hot, R.mipmap.logo_category, R.mipmap.logo_my};
     //默认图标
-    private int[] mIconUnselectIds = {R.mipmap.tab_home_unselect, R.mipmap.tab_speech_unselect, R.mipmap.tab_more_unselect, R.mipmap.tab_contact_unselect};
+    private int[] mIconUnselectIds = {R.mipmap.tab_home_unselect, R.mipmap.tab_speech_unselect, R.mipmap.ic_tab_category_normal, R.mipmap.tab_contact_unselect};
     //选中图标
-    private int[] mIconSelectIds = {R.mipmap.tab_home_select, R.mipmap.tab_speech_select, R.mipmap.tab_more_select, R.mipmap.tab_contact_select};
+    private int[] mIconSelectIds = {R.mipmap.tab_home_select, R.mipmap.tab_speech_select, R.mipmap.ic_tab_category_selected, R.mipmap.tab_contact_select};
     private ArrayList<CustomTabEntity> mTabEntities = new ArrayList<>();
     //再按一次退出程序
     private long exitTime;
@@ -42,6 +43,10 @@ public class MainActivity extends BaseViewPageActivity {
         mTabLayout = getViewById(R.id.tl_menu);
         mViewPage = getViewById(R.id.vp_content);
         mToolbar = getViewById(R.id.toolbar);
+        mTitle = getViewById(R.id.tv_title);
+        mToolbarTop = getViewById(R.id.toolbar_top);
+        if (setTranslucentStatus)
+            mToolbarTop.setVisibility(View.VISIBLE);
         for (int i = 0; i < mTitles.length; i++) {
             mTabEntities.add(new TabEntity(mTitles[i], mIconSelectIds[i], mIconUnselectIds[i]));
         }
@@ -57,7 +62,7 @@ public class MainActivity extends BaseViewPageActivity {
         mViewPage.addOnPageChangeListener(this);
         setSupportActionBar(mToolbar);
         setTitle("");
-        mToolbar.setLogo(getResources().getDrawable(R.mipmap.logo_bg));
+        setTitles(0);
         mToolbar.setOnMenuItemClickListener(onMenuItemClick);
         setMenu();
     }
@@ -80,12 +85,24 @@ public class MainActivity extends BaseViewPageActivity {
 
     @Override
     public void onTabSelect(int position) {
+        setTitles(position);
         mViewPage.setCurrentItem(position);
     }
 
     @Override
     public void onPageSelected(int position) {
         mTabLayout.setCurrentTab(position);
+        setTitles(position);
+    }
+
+    /**
+     * 设置标题
+     *
+     * @param position
+     */
+    private void setTitles(int position) {
+        mToolbar.setLogo(null);
+        mTitle.setBackgroundDrawable(getResources().getDrawable(mLogo[position]));
     }
 
     /**

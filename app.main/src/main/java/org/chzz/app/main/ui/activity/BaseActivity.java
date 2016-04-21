@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import org.chzz.adapter.CHZZViewHolderHelper;
 import org.chzz.app.main.AppContext;
@@ -43,30 +44,31 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
     protected String TAG;
     //标题栏
     protected Toolbar mToolbar;
+    protected TextView mTitle;
     //临听
     protected FillDataListener mFillDataListener;
     //是否开始一体化
     protected boolean setTranslucentStatus;
     protected SystemBarTintManager mTintManager;
     //一体化顶部
-    private LinearLayout mToolbarTop;
+    protected LinearLayout mToolbarTop;
     //数据列表
     protected RecyclerView mDataRv;
     //布局
     protected CHZZRefreshLayout mRefreshLayout;
-    protected Toolbar.OnMenuItemClickListener onMenuItemClick ;
+    protected Toolbar.OnMenuItemClickListener onMenuItemClick;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mApp = AppContext.getInstance();
-        mToolbarTop = getViewById(R.id.toolbar_top);
-
+        initTranslucentStatus();
         initView(savedInstanceState);
         setListener();
         onUserVisible();
         processLogic(savedInstanceState);
 
-        initTranslucentStatus();
+
     }
 
     /**
@@ -147,8 +149,7 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
         mTintManager.setStatusBarTintEnabled(true);
         // 激活导航栏设置，设置导航背景色
         mTintManager.setStatusBarTintResource(R.color.bg_transparent);
-        if (!setTranslucentStatus)
-            mToolbarTop.setVisibility(View.GONE);
+
         //版本小于19隐藏一体化
     }
 
@@ -170,12 +171,12 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
         }
         win.setAttributes(winParams);
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return super.onCreateOptionsMenu(menu);
     }
-
 
 
 }
