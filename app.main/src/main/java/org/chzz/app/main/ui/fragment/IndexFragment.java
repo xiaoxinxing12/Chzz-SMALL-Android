@@ -19,6 +19,7 @@ import org.chzz.refresh.CHZZRefreshLayout;
 
 import java.util.List;
 
+import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
@@ -124,8 +125,9 @@ public class IndexFragment extends BaseFragment implements CHZZRefreshLayout.BGA
             return;
         }
         mEngine.loadNewData(mNewPageNumber).enqueue(new Callback<List<RefreshModel>>() {
+
             @Override
-            public void onResponse(final Response<List<RefreshModel>> response) {
+            public void onResponse(Call<List<RefreshModel>> call, final Response<List<RefreshModel>> response) {
                 ThreadUtil.runInUIThread(new Runnable() {
                     @Override
                     public void run() {
@@ -136,9 +138,10 @@ public class IndexFragment extends BaseFragment implements CHZZRefreshLayout.BGA
             }
 
             @Override
-            public void onFailure(Throwable t) {
+            public void onFailure(Call<List<RefreshModel>> call, Throwable t) {
                 mRefreshLayout.endRefreshing();
             }
+
         });
     }
 
@@ -152,7 +155,7 @@ public class IndexFragment extends BaseFragment implements CHZZRefreshLayout.BGA
         }
         mEngine.loadMoreData(mMorePageNumber).enqueue(new Callback<List<RefreshModel>>() {
             @Override
-            public void onResponse(final Response<List<RefreshModel>> response) {
+            public void onResponse(Call<List<RefreshModel>> call, final Response<List<RefreshModel>> response) {
                 ThreadUtil.runInUIThread(new Runnable() {
                     @Override
                     public void run() {
@@ -163,9 +166,10 @@ public class IndexFragment extends BaseFragment implements CHZZRefreshLayout.BGA
             }
 
             @Override
-            public void onFailure(Throwable t) {
+            public void onFailure(Call<List<RefreshModel>> call, Throwable t) {
                 mRefreshLayout.endLoadingMore();
             }
+
         });
         return true;
     }

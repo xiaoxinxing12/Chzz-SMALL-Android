@@ -40,6 +40,7 @@ public class MainActivity extends BaseViewPageActivity {
     @Override
     protected void initView(Bundle savedInstanceState) {
         setContentView(R.layout.activity_main);
+
         mTabLayout = getViewById(R.id.tl_menu);
         mViewPage = getViewById(R.id.vp_content);
         mToolbar = getViewById(R.id.toolbar);

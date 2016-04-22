@@ -6,7 +6,6 @@ import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
 
-
 import org.chzz.app.main.AppContext;
 import org.chzz.app.main.R;
 import org.chzz.app.main.model.BannerModel;
@@ -15,6 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import cn.bingoogolapple.bgabanner.BGABanner;
+import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
@@ -34,8 +34,9 @@ public class DataEngine {
         }
         banner.setViews(views);
         AppContext.getInstance().getEngine().getBannerModel().enqueue(new Callback<BannerModel>() {
+
             @Override
-            public void onResponse(Response<BannerModel> response) {
+            public void onResponse(Call<BannerModel> call, Response<BannerModel> response) {
                 BannerModel bannerModel = response.body();
                 for (int i = 0; i < views.size(); i++) {
                     Glide.with(context).load(bannerModel.imgs.get(i)).placeholder(R.mipmap.holder).error(R.mipmap.holder).dontAnimate().thumbnail(0.1f).into((ImageView) views.get(i));
@@ -44,7 +45,8 @@ public class DataEngine {
             }
 
             @Override
-            public void onFailure(Throwable t) {
+            public void onFailure(Call<BannerModel> call, Throwable t) {
+
             }
         });
         return headerView;

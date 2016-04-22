@@ -15,7 +15,7 @@
         android:theme="@style/AppTheme"
         android:name=".AppContext"
         tools:replace="android:icon">
-        <activity android:name=".ui.activity.MainActivity">
+        <activity android:name=".mvp.ui.activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
