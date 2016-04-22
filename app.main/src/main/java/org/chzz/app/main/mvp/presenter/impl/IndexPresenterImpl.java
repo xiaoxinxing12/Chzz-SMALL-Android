@@ -34,4 +34,9 @@ public class IndexPresenterImpl implements IndexPresenter, OnGetDataListener {
     public void onSuccess(String result) {
         indexView.getData(result);
     }
+
+    @Override
+    public void onDestroy() {
+        indexView = null;
+    }
 }

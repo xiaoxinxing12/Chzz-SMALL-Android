@@ -55,6 +55,11 @@ public class MainActivity extends BaseActivity implements IndexView {
         }
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        indexPresenter.onDestroy();
+    }
 
     @Override
     public void getData(String result) {

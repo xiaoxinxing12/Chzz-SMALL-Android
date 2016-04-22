@@ -13,4 +13,5 @@ package org.chzz.app.main.mvp.presenter;
 public interface IndexPresenter {
 
     void getData(int mNewPageNumber);
+    void onDestroy();
 }

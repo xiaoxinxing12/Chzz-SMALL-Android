@@ -12,4 +12,5 @@ package org.chzz.app.main.mvp.presenter;
  **/
 public interface OnGetDataListener {
     void onSuccess(String result);
+
 }
