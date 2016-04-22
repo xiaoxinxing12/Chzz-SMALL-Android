@@ -16,9 +16,11 @@ import android.widget.TextView;
 import org.chzz.adapter.CHZZViewHolderHelper;
 import org.chzz.app.main.AppContext;
 import org.chzz.app.main.R;
+import org.chzz.app.main.engine.Engine;
 import org.chzz.app.main.engine.FillDataListener;
 import org.chzz.app.main.model.BaseModel;
 import org.chzz.app.main.utlis.SystemBarTintManager;
+import org.chzz.app.main.utlis.ToastUtil;
 import org.chzz.refresh.CHZZRefreshLayout;
 
 import cn.pedant.SweetAlert.SweetAlertDialog;
@@ -37,11 +39,13 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
     protected boolean mIsNetworkEnabled = true;
     protected int mNewPageNumber = 0;
     protected int mMorePageNumber = 1;
+    protected final int LOADING_DURATION = 2000;
     //再按一次退出程序
     protected long exitTime;
     private SweetAlertDialog mLoadingDialog;
     protected AppContext mApp;
     protected String TAG;
+    protected Engine mEngine;
     //标题栏
     protected Toolbar mToolbar;
     protected TextView mTitle;
@@ -62,6 +66,7 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mApp = AppContext.getInstance();
+        mEngine = mApp.getEngine();
         initTranslucentStatus();
         initView(savedInstanceState);
         setListener();
@@ -178,5 +183,7 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
         return super.onCreateOptionsMenu(menu);
     }
 
-
+    protected void showToast(String text) {
+        ToastUtil.show(text);
+    }
 }

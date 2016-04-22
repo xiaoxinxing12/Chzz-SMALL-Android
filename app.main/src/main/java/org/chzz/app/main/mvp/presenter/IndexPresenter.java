@@ -10,8 +10,8 @@ package org.chzz.app.main.mvp.presenter;
  * 修订历史 ：
  * ============================================================
  **/
-public interface IndexPresenter {
+public interface IndexPresenter extends BasePresenter {
 
     void getData(int mNewPageNumber);
-    void onDestroy();
+
 }
