@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import org.chzz.app.main.AppContext;
+import org.chzz.app.main.engine.Engine;
 import org.chzz.app.main.ui.activity.BaseActivity;
 import org.chzz.app.main.utlis.ToastUtil;
 import org.chzz.refresh.CHZZRefreshLayout;
@@ -25,6 +26,8 @@ public abstract class BaseFragment extends Fragment {
     protected AppContext mApp;
     protected View mContentView;
     protected BaseActivity mActivity;
+    protected Engine mEngine;
+    protected final int LOADING_DURATION = 2000;
     //布局
     protected CHZZRefreshLayout mRefreshLayout;
     protected boolean mIsNetworkEnabled = true;
@@ -39,6 +42,7 @@ public abstract class BaseFragment extends Fragment {
         TAG = this.getClass().getSimpleName();
         mApp = AppContext.getInstance();
         mActivity = (BaseActivity) activity;
+        mEngine = mApp.getEngine();
     }
 
     @Override
