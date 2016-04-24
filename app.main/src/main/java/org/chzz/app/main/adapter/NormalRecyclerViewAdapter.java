@@ -6,7 +6,7 @@ import android.support.v7.widget.RecyclerView;
 import org.chzz.adapter.CHZZRecyclerViewAdapter;
 import org.chzz.adapter.CHZZViewHolderHelper;
 import org.chzz.app.main.engine.FillDataListener;
-import org.chzz.app.main.model.BaseModel;
+import org.chzz.app.main.model.bean.BaseModel;
 
 /**
  * ============================================================

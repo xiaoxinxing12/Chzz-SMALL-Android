@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/WrapWrap"
+    app:cardBackgroundColor="#FFF"
+    android:background="@drawable/selector_item"
+    android:padding="10dp"
+    app:cardCornerRadius="2dp">
+    <LinearLayout
+        style="@style/WrapWrap"
+        android:orientation="vertical">
+
+        <ImageView
+            android:scaleType="fitXY"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:src="@mipmap/test_bei"/>
+
+        <TextView
+            android:singleLine="true"
+            android:id="@+id/tv_item_normal_title"
+            style="@style/WrapWrap"
+            android:layout_margin="@dimen/common_margin_5"
+            android:text="从古至今其主要功能都是用来饮酒或饮茶"
+            android:textColor="@color/common_text_color"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/tv_item_normal_detail"
+            style="@style/WrapWrap"
+            android:layout_margin="@dimen/common_margin_5"
+            android:text="￥ 99.9"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp"/>
+
+    </LinearLayout>
+</android.support.v7.widget.CardView>

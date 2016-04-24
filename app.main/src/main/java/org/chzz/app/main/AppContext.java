@@ -35,7 +35,7 @@ public class AppContext extends Application {
                 .addNetworkInterceptor(new StethoInterceptor())
                 .build();
         mEngine = new Retrofit.Builder()
-                .baseUrl("http://7xk9dj.com1.z0.glb.clouddn.com/")
+                .baseUrl("http://www.chzz.org/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(client)
                 .build().create(Engine.class);

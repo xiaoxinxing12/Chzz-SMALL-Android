@@ -1,5 +1,7 @@
 package org.chzz.app.main.mvp.presenter.impl;
 
+import org.chzz.app.main.model.bean.BaseModel;
+import org.chzz.app.main.model.bean.RefreshModels;
 import org.chzz.app.main.mvp.model.impl.IndexModelImpl;
 import org.chzz.app.main.mvp.presenter.IndexPresenter;
 import org.chzz.app.main.mvp.presenter.IndexView;
@@ -26,17 +28,23 @@ public class IndexPresenterImpl implements IndexPresenter, OnGetDataListener {
     }
 
     @Override
-    public void getData(int mNewPageNumber) {
-        indexModel.getData(mNewPageNumber, this);
+    public void getData(int mNewPageNumber, int code) {
+        indexModel.getData(mNewPageNumber, this, code);
     }
 
-    @Override
-    public void onSuccess(String result) {
-        indexView.getData(result);
-    }
 
     @Override
     public void onDestroy() {
         indexView = null;
+    }
+
+    @Override
+    public void onSuccess(RefreshModels bean, int code) {
+        indexView.getData(bean, code);
+    }
+
+    @Override
+    public void result(BaseModel model, int code) {
+        indexView.getData((RefreshModels) model, code);
     }
 }

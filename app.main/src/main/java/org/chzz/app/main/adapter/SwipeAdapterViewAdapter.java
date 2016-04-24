@@ -6,7 +6,8 @@ import android.content.Context;
 import org.chzz.adapter.CHZZAdapterViewAdapter;
 import org.chzz.adapter.CHZZViewHolderHelper;
 import org.chzz.app.main.R;
-import org.chzz.app.main.model.RefreshModel;
+import org.chzz.app.main.model.bean.BaseModel;
+import org.chzz.app.main.model.bean.RefreshModels;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,7 +20,7 @@ import cn.bingoogolapple.swipeitemlayout.BGASwipeItemLayout;
  * 创建时间:15/5/21 上午12:39
  * 描述:
  */
-public class SwipeAdapterViewAdapter extends CHZZAdapterViewAdapter<RefreshModel> {
+public class SwipeAdapterViewAdapter<T extends BaseModel> extends CHZZAdapterViewAdapter<T> {
     /**
      * 当前处于打开状态的item
      */
@@ -54,9 +55,12 @@ public class SwipeAdapterViewAdapter extends CHZZAdapterViewAdapter<RefreshModel
     }
 
     @Override
-    public void fillData(CHZZViewHolderHelper viewHolderHelper, int position, RefreshModel model) {
-        viewHolderHelper.setText(R.id.tv_item_swipe_title, model.title).setText(R.id.tv_item_swipe_detail, model.detail).setText(R.id.et_item_swipe_title, model.title);
+    protected void fillData(CHZZViewHolderHelper viewHolderHelper, int position, T models) {
+        RefreshModels.DataBean model = (RefreshModels.DataBean) models;
+        viewHolderHelper.setText(R.id.tv_item_swipe_title, model.getTitle()).setText(R.id.tv_item_swipe_detail, model.getDetail()).setText(R.id.et_item_swipe_title, model.getTitle());
+
     }
+
 
     public void closeOpenedSwipeItemLayoutWithAnim() {
         for (BGASwipeItemLayout sil : mOpenedSil) {

@@ -1,13 +1,148 @@
-<?xml version="1.0" encoding="utf-8"?>
-<org.chzz.refresh.CHZZRefreshLayout android:id="@+id/rl_listview_refresh"
-                                    style="@style/MatchMatch"
-                                    xmlns:android="http://schemas.android.com/apk/res/android">
+<org.chzz.refresh.CHZZRefreshLayout
+    android:id="@+id/refreshLayout"
+    style="@style/MatchMatch"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingBottom="@dimen/test_padding_margin"
+    android:paddingTop="@dimen/test_padding_margin">
 
-    <ListView
-        android:id="@+id/lv_listview_data"
+    <org.chzz.refresh.CHZZStickyNavLayout
         style="@style/MatchAuto"
-        android:divider="@mipmap/list_divider"
-        android:overScrollMode="never"
-        android:padding="5dp"
-        android:scrollbars="none"/>
+        android:layout_marginBottom="@dimen/test_padding_margin"
+        android:layout_marginTop="@dimen/test_padding_margin"
+        android:paddingBottom="@dimen/test_padding_margin"
+        android:paddingTop="@dimen/test_padding_margin">
+
+        <LinearLayout
+            android:id="@+id/ll_headerView"
+            style="@style/MatchWrap"
+            android:gravity="center"
+            android:orientation="vertical"
+            />
+
+        <LinearLayout
+            style="@style/MatchWrap.Horizontal"
+            android:layout_marginBottom="@dimen/test_padding_margin"
+            android:layout_marginTop="@dimen/test_padding_margin"
+            android:background="@color/colorPrimary"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp">
+
+            <TextView
+                android:id="@+id/retweet"
+                style="@style/AutoWrap"
+                android:gravity="center"
+                android:text="转发"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/comment"
+                style="@style/AutoWrap"
+                android:gravity="center"
+                android:text="评论"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/praise"
+                style="@style/AutoWrap"
+                android:gravity="center"
+                android:text="赞"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"/>
+        </LinearLayout>
+
+        <org.chzz.app.main.widget.MyScrollview
+            style="@style/MatchMatch"
+            android:layout_marginBottom="@dimen/test_padding_margin"
+            android:layout_marginTop="@dimen/test_padding_margin"
+            android:overScrollMode="never"
+            android:scrollbars="none">
+
+            <LinearLayout
+                style="@style/MatchMatch.Vertical"
+                android:layout_margin="@dimen/test_padding_margin"
+                android:background="@android:color/white">
+
+                <RelativeLayout
+                    style="@style/MatchWrap"
+                    android:layout_margin="@dimen/common_margin_10"
+                    >
+
+                    <View
+                        android:layout_width="3dp"
+                        android:layout_height="25dp"
+                        android:background="@color/colorPrimary"/>
+
+                    <TextView
+                        style="@style/WrapWrap"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/common_margin_10"
+                        android:text="最新推荐"
+                        android:textColor="@color/common_text_color"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        style="@style/WrapWrap"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:drawableRight="@mipmap/ico_arrow_right"
+                        android:text="更多"/>
+                </RelativeLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_hot_data"
+                    style="@style/MatchMatch"
+                    android:horizontalSpacing="@dimen/common_margin_5"
+                    android:verticalSpacing="@dimen/common_margin_5"
+                    android:layout_marginLeft="@dimen/common_margin_5"
+                    android:layout_marginRight="@dimen/common_margin_5"
+                    android:background="@color/common_background"
+                    tools:listitem="@layout/item_fragment_index"
+                    android:numColumns="2"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/common_margin_10"
+                    android:layout_height="@dimen/common_margin_10"
+                    android:background="@color/common_gray_bg"/>
+
+                <RelativeLayout
+                    style="@style/MatchWrap"
+                    android:layout_margin="@dimen/common_margin_10"
+                    >
+
+                    <View
+                        android:layout_width="3dp"
+                        android:layout_height="25dp"
+                        android:background="@color/colorPrimary"/>
+
+                    <TextView
+                        style="@style/WrapWrap"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/common_margin_10"
+                        android:text="热门推荐"
+                        android:textColor="@color/common_text_color"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        style="@style/WrapWrap"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:drawableRight="@mipmap/ico_arrow_right"
+                        android:text="更多"/>
+                </RelativeLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/gv_data"
+                    style="@style/MatchMatch"
+                    android:numColumns="2"/>
+            </LinearLayout>
+        </org.chzz.app.main.widget.MyScrollview>
+
+    </org.chzz.refresh.CHZZStickyNavLayout>
 </org.chzz.refresh.CHZZRefreshLayout>

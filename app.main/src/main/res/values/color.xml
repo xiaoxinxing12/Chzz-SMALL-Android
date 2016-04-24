@@ -59,6 +59,8 @@
     <color name="white">#FFFFFF</color>
     <color name="click_color">#ecebeb</color>
     <color name="black">#000000</color>
+    <color name="common_gray_bg">#f4f2f2</color>
+    <color name="fragment_bg">#faf8f8</color>
     <color name="gray">#f1828692</color>
     <color name="splash_bar_color">#F86961</color>
     <color name="bar_color">#3da1ff</color>
@@ -69,6 +71,7 @@
     <color name="text_main">#f1ae</color>
     <color name="text_title">#3dbef7</color>
     <color name="gray_67">#676767</color>
+    <color name="common_text_color">#2e2e2e</color>
     <color name="rectangular_line">#B5B5B5</color>
     <color name="bg_transparent">#00000000</color>
 

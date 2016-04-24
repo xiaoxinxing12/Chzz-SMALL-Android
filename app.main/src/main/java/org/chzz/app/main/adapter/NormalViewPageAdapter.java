@@ -4,6 +4,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
+import org.chzz.app.main.ui.fragment.HotFragment;
 import org.chzz.app.main.ui.fragment.IndexFragment;
 
 /**
@@ -27,7 +28,19 @@ public class NormalViewPageAdapter extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-        return new IndexFragment();
+        Fragment fragment;
+        switch (position) {
+            case 0:
+                fragment = new IndexFragment();
+                break;
+            case 1:
+                fragment = new HotFragment();
+                break;
+            default:
+                fragment = new IndexFragment();
+                break;
+        }
+        return  fragment;
     }
 
     @Override

@@ -1,11 +1,11 @@
-package org.chzz.app.main.model;
+package org.chzz.app.main.model.bean;
 
 /**
  * 作者:copy 邮件:2499551993@qq.com
  * 创建时间:15/5/21 14:53
  * 描述:
  */
-public class RefreshModel {
+public class RefreshModel extends BaseModel {
     public String title;
     public String detail;
 

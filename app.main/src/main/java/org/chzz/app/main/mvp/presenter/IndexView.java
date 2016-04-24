@@ -1,5 +1,7 @@
 package org.chzz.app.main.mvp.presenter;
 
+import org.chzz.app.main.model.bean.RefreshModels;
+
 /**
  * ============================================================
  * 版权 ：深圳市医友智能技术有限公司 版权所有 (c)   2016/4/22
@@ -11,5 +13,5 @@ package org.chzz.app.main.mvp.presenter;
  * ============================================================
  **/
 public interface IndexView {
-    void getData(String result);
+    void getData(RefreshModels bean,int code);
 }

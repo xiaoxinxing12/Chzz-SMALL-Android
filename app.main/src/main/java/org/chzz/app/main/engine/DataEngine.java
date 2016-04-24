@@ -2,13 +2,10 @@ package org.chzz.app.main.engine;
 
 import android.content.Context;
 import android.view.View;
-import android.widget.ImageView;
-
-import com.bumptech.glide.Glide;
 
 import org.chzz.app.main.AppContext;
 import org.chzz.app.main.R;
-import org.chzz.app.main.model.BannerModel;
+import org.chzz.app.main.model.bean.BannerModel;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,9 +36,9 @@ public class DataEngine {
             public void onResponse(Call<BannerModel> call, Response<BannerModel> response) {
                 BannerModel bannerModel = response.body();
                 for (int i = 0; i < views.size(); i++) {
-                    Glide.with(context).load(bannerModel.imgs.get(i)).placeholder(R.mipmap.holder).error(R.mipmap.holder).dontAnimate().thumbnail(0.1f).into((ImageView) views.get(i));
+                    //Glide.with(context).load(bannerModel.imgs.get(i)).placeholder(R.mipmap.holder).error(R.mipmap.holder).dontAnimate().thumbnail(0.1f).into((ImageView) views.get(i));
                 }
-                banner.setTips(bannerModel.tips);
+               // banner.setTips(bannerModel.tips);
             }
 
             @Override

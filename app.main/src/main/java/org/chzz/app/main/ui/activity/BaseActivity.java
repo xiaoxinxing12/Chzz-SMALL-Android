@@ -18,7 +18,7 @@ import org.chzz.app.main.AppContext;
 import org.chzz.app.main.R;
 import org.chzz.app.main.engine.Engine;
 import org.chzz.app.main.engine.FillDataListener;
-import org.chzz.app.main.model.BaseModel;
+import org.chzz.app.main.model.bean.BaseModel;
 import org.chzz.app.main.utlis.SystemBarTintManager;
 import org.chzz.app.main.utlis.ToastUtil;
 import org.chzz.refresh.CHZZRefreshLayout;

@@ -1,4 +1,4 @@
-package org.chzz.app.main.model;
+package org.chzz.app.main.model.bean;
 
 /**
  * 作者:copy 邮件:2499551993@qq.com

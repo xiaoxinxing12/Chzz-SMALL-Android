@@ -1,4 +1,4 @@
-package org.chzz.app.main.model;
+package org.chzz.app.main.model.bean;
 
 import java.util.List;
 

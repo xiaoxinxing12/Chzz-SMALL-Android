@@ -11,7 +11,7 @@ import org.chzz.adapter.CHZZViewHolderHelper;
 import org.chzz.app.main.R;
 import org.chzz.app.main.adapter.NormalRecyclerViewAdapter;
 import org.chzz.app.main.engine.FillDataListener;
-import org.chzz.app.main.model.BaseModel;
+import org.chzz.app.main.model.bean.BaseModel;
 import org.chzz.app.main.ui.activity.BaseActivity;
 import org.chzz.app.main.utlis.ConstantValues;
 import org.chzz.app.main.utlis.ThreadUtil;

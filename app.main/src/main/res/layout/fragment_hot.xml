@@ -1,0 +1,20 @@
+<org.chzz.refresh.CHZZRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/refreshLayout"
+    style="@style/MatchMatch"
+    android:paddingBottom="@dimen/test_padding_margin"
+    android:paddingTop="@dimen/test_padding_margin">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_data"
+            style="@style/MatchMatch"
+            android:layout_marginBottom="@dimen/test_padding_margin"
+            android:layout_marginTop="@dimen/test_padding_margin"
+            android:background="@color/fragment_bg"
+            android:overScrollMode="never"
+            android:paddingBottom="@dimen/test_padding_margin"
+            android:paddingTop="@dimen/test_padding_margin"
+            android:scrollbars="none"
+            tools:listitem="@layout/item_fragment_hot" />
+
+</org.chzz.refresh.CHZZRefreshLayout>

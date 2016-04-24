@@ -12,6 +12,6 @@ package org.chzz.app.main.mvp.presenter;
  **/
 public interface IndexPresenter extends BasePresenter {
 
-    void getData(int mNewPageNumber);
+    void getData(int mNewPageNumber,int code);
 
 }

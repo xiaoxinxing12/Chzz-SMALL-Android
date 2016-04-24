@@ -1,7 +1,7 @@
 package org.chzz.app.main.engine;
 
 import org.chzz.adapter.CHZZViewHolderHelper;
-import org.chzz.app.main.model.BaseModel;
+import org.chzz.app.main.model.bean.BaseModel;
 
 /**
  * ============================================================

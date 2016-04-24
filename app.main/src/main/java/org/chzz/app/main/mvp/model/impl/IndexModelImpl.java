@@ -1,6 +1,11 @@
 package org.chzz.app.main.mvp.model.impl;
 
+import org.chzz.app.main.AppContext;
+import org.chzz.app.main.engine.DataCallback;
+import org.chzz.app.main.engine.Engine;
+import org.chzz.app.main.model.bean.RefreshModels;
 import org.chzz.app.main.mvp.model.IndexModel;
+import org.chzz.app.main.mvp.presenter.BaseListener;
 import org.chzz.app.main.mvp.presenter.OnGetDataListener;
 
 /**
@@ -14,8 +19,13 @@ import org.chzz.app.main.mvp.presenter.OnGetDataListener;
  * ============================================================
  **/
 public class IndexModelImpl implements IndexModel {
+    protected Engine mEngine = AppContext.getInstance().getEngine();
+    protected final int LOADING_DURATION = 2000;
+
     @Override
-    public void getData(int mNewPageNumber, OnGetDataListener onGetDataListener) {
-        onGetDataListener.onSuccess("aaa");
+    public void getData(int mNewPageNumber, final OnGetDataListener onGetDataListener,  int code) {
+       // mEngine.loadNewData(mNewPageNumber).enqueue(new DataCallback<RefreshModels>((BaseListener) onGetDataListener,code));
     }
+
+
 }

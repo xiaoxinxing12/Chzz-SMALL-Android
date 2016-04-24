@@ -1,4 +1,4 @@
-package org.chzz.app.main.model;
+package org.chzz.app.main.model.bean;
 
 /**
  * ============================================================
@@ -11,4 +11,23 @@ package org.chzz.app.main.model;
  * ============================================================
  **/
 public class BaseModel {
+
+    protected String info;
+    protected int status;
+
+    public String getInfo() {
+        return info;
+    }
+
+    public void setInfo(String info) {
+        this.info = info;
+    }
+
+    public int getStatus() {
+        return status;
+    }
+
+    public void setStatus(int status) {
+        this.status = status;
+    }
 }

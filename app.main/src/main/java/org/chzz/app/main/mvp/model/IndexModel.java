@@ -12,6 +12,6 @@ import org.chzz.app.main.mvp.presenter.OnGetDataListener;
  * 修订历史 ：
  * ============================================================
  **/
-public interface IndexModel {
-    void getData(int mNewPageNumber, OnGetDataListener onGetDataListener);
+public interface IndexModel extends BaseModel {
+    void getData(int mNewPageNumber, OnGetDataListener onGetDataListener,int code);
 }

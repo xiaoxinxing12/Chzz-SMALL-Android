@@ -13,7 +13,7 @@ import android.widget.Toast;
 import org.chzz.app.main.AppContext;
 import org.chzz.app.main.R;
 import org.chzz.app.main.adapter.NormalViewPageAdapter;
-import org.chzz.app.main.model.TabEntity;
+import org.chzz.app.main.model.bean.TabEntity;
 import org.chzz.tablayout.CommonTabLayout;
 import org.chzz.tablayout.listener.CustomTabEntity;
 

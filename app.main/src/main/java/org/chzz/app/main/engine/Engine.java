@@ -2,9 +2,10 @@ package org.chzz.app.main.engine;
 
 
 
-import org.chzz.app.main.model.BannerModel;
-import org.chzz.app.main.model.RefreshModel;
-import org.chzz.app.main.model.StaggeredModel;
+import org.chzz.app.main.model.bean.BannerModel;
+import org.chzz.app.main.model.bean.RefreshModel;
+import org.chzz.app.main.model.bean.RefreshModels;
+import org.chzz.app.main.model.bean.StaggeredModel;
 
 import java.util.List;
 
@@ -22,8 +23,8 @@ public interface Engine {
     @GET("refreshlayout/api/defaultdata6.json")
     Call<List<RefreshModel>> loadInitDatas();
 
-    @GET("refreshlayout/api/newdata{pageNumber}.json")
-    Call<List<RefreshModel>> loadNewData(@Path("pageNumber") int pageNumber);
+    @GET("refreshlayout/newdata{pageNumber}.txt")
+    Call<RefreshModels> loadNewData(@Path("pageNumber") int pageNumber);
 
     @GET("refreshlayout/api/moredata{pageNumber}.json")
     Call<List<RefreshModel>> loadMoreData(@Path("pageNumber") int pageNumber);
