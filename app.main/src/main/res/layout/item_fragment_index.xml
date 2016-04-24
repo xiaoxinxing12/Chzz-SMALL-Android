@@ -4,8 +4,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     style="@style/WrapWrap"
     app:cardBackgroundColor="#FFF"
+    android:layout_marginLeft="2dp"
+    android:layout_marginRight="2dp"
+    android:layout_marginTop="1dp"
     android:background="@drawable/selector_item"
-    android:padding="10dp"
+    app:cardElevation="1.5dp"
     app:cardCornerRadius="2dp">
     <LinearLayout
         style="@style/WrapWrap"
@@ -15,7 +18,7 @@
             android:scaleType="fitXY"
             android:layout_width="match_parent"
             android:layout_height="80dp"
-            android:src="@mipmap/test_bei"/>
+            android:src="@mipmap/test_bei2"/>
 
         <TextView
             android:singleLine="true"

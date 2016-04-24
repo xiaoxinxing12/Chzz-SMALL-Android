@@ -96,18 +96,16 @@
                 <android.support.v7.widget.RecyclerView
                     android:id="@+id/rv_hot_data"
                     style="@style/MatchMatch"
-                    android:horizontalSpacing="@dimen/common_margin_5"
-                    android:verticalSpacing="@dimen/common_margin_5"
                     android:layout_marginLeft="@dimen/common_margin_5"
                     android:layout_marginRight="@dimen/common_margin_5"
                     android:background="@color/common_background"
                     tools:listitem="@layout/item_fragment_index"
-                    android:numColumns="2"/>
+                    />
 
                 <View
                     android:layout_width="match_parent"
-                    android:layout_marginTop="@dimen/common_margin_10"
                     android:layout_height="@dimen/common_margin_10"
+                    android:layout_marginTop="@dimen/common_margin_10"
                     android:background="@color/common_gray_bg"/>
 
                 <RelativeLayout
@@ -140,7 +138,10 @@
                 <android.support.v7.widget.RecyclerView
                     android:id="@+id/gv_data"
                     style="@style/MatchMatch"
-                    android:numColumns="2"/>
+                    android:layout_marginLeft="@dimen/common_margin_5"
+                    android:layout_marginRight="@dimen/common_margin_5"
+                    android:background="@color/common_background"
+                    />
             </LinearLayout>
         </org.chzz.app.main.widget.MyScrollview>
 

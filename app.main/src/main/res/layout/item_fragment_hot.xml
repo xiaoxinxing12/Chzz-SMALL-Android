@@ -8,7 +8,7 @@
     android:layout_marginTop="1dp"
     app:cardBackgroundColor="#FFF"
     android:background="@drawable/selector_item"
-    android:padding="10dp"
+    app:cardElevation="1.3dp"
     app:cardCornerRadius="4dp">
 
     <LinearLayout
