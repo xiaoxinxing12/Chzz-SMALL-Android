@@ -7,7 +7,9 @@ import android.util.Log;
 import com.facebook.stetho.Stetho;
 import com.facebook.stetho.okhttp3.StethoInterceptor;
 
+import org.chzz.app.main.engine.CookiesInterceptor;
 import org.chzz.app.main.engine.Engine;
+import org.chzz.app.main.utlis.ConstantValues;
 
 import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
@@ -32,13 +34,16 @@ public class AppContext extends Application {
         sInstance = this;
         Stetho.initializeWithDefaults(this);
         OkHttpClient client = new OkHttpClient.Builder()
+                .addNetworkInterceptor(new CookiesInterceptor(this.getApplicationContext()))
                 .addNetworkInterceptor(new StethoInterceptor())
+                .followRedirects(false)
                 .build();
         mEngine = new Retrofit.Builder()
-                .baseUrl("http://www.chzz.org/")
-                .addConverterFactory(GsonConverterFactory.create())
+                .baseUrl(ConstantValues.BASE_URL)
                 .client(client)
+                .addConverterFactory(GsonConverterFactory.create())
                 .build().create(Engine.class);
+
     }
 
     @Override
@@ -53,4 +58,8 @@ public class AppContext extends Application {
     public Engine getEngine() {
         return mEngine;
     }
+
+
+
+
 }

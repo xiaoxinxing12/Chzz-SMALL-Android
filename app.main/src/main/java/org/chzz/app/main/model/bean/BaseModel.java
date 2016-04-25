@@ -14,6 +14,7 @@ public class BaseModel {
 
     protected String info;
     protected int status;
+    private String desc;
 
     public String getInfo() {
         return info;
@@ -29,5 +30,13 @@ public class BaseModel {
 
     public void setStatus(int status) {
         this.status = status;
+    }
+
+    public String getDesc() {
+        return desc;
+    }
+
+    public void setDesc(String desc) {
+        this.desc = desc;
     }
 }
