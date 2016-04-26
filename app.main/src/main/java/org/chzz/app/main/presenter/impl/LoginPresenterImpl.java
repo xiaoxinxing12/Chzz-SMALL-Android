@@ -10,12 +10,11 @@ import org.chzz.app.main.ui.listener.LoginView;
 
 import java.util.Map;
 
-import dagger.Module;
+
 
 /**
  * Created by copy on 2016/4/25.
  */
-@Module
 public class LoginPresenterImpl implements LoginPresenter, OnDataListener {
     private LoginView mLoginView;
     private LoginModel mLoginModel;

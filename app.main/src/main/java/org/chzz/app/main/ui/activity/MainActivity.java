@@ -103,7 +103,7 @@ public class MainActivity extends BaseViewPageActivity {
      */
     private void setTitles(int position) {
         mToolbar.setLogo(null);
-        mTitle.setBackgroundDrawable(getResources().getDrawable(mLogo[position]));
+        mTitle.setBackgroundDrawable(position == 3 ? null : getResources().getDrawable(mLogo[position]));
     }
 
     /**

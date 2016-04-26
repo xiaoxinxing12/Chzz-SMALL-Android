@@ -35,8 +35,8 @@ public class ConstantValues {
     // 错误状态
     public static final int POINT_STATE_WRONG = 2;
     // 服务器的base地址
-    //public static final String BASE_URL = "http://www.chzz.org";
-    public static final String BASE_URL = "http://zyy.hxyiyo.com:8080/";
+    public static final String BASE_URL = "http://www.chzz.org";
+   // public static final String BASE_URL = "http://zyy.hxyiyo.com:8080/";
     public static Typeface TF_CORESANS_FONT = null;
 
 }
