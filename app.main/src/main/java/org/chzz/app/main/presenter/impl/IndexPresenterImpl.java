@@ -1,6 +1,6 @@
 package org.chzz.app.main.presenter.impl;
 
-import org.chzz.app.main.model.bean.BaseModel;
+import org.chzz.app.main.model.bean.BaseEntity;
 import org.chzz.app.main.model.impl.IndexModelImpl;
 import org.chzz.app.main.presenter.IndexPresenter;
 import org.chzz.app.main.presenter.listener.OnDataListener;
@@ -26,7 +26,7 @@ public class IndexPresenterImpl implements IndexPresenter, OnDataListener {
 
 
     @Override
-    public void result(BaseModel model, int code) {
+    public void result(BaseEntity model, int code) {
         switch (code) {
             case 0:
                 mIndexView.hotDataResult(model);

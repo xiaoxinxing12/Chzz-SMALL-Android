@@ -5,7 +5,7 @@ import android.content.Context;
 import org.chzz.adapter.CHZZAdapterViewAdapter;
 import org.chzz.adapter.CHZZViewHolderHelper;
 import org.chzz.app.main.engine.FillDataListener;
-import org.chzz.app.main.model.bean.BaseModel;
+import org.chzz.app.main.model.bean.BaseEntity;
 
 
 /**
@@ -13,7 +13,7 @@ import org.chzz.app.main.model.bean.BaseModel;
  * 创建时间:15/5/21 上午12:39
  * 描述:
  */
-public class NormalAdapterViewAdapter<T extends BaseModel> extends CHZZAdapterViewAdapter<T> {
+public class NormalAdapterViewAdapter<T extends BaseEntity> extends CHZZAdapterViewAdapter<T> {
     private Context context;
     private FillDataListener iFillDataListener;
 

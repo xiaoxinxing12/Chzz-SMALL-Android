@@ -6,7 +6,7 @@ import android.content.Context;
 import org.chzz.adapter.CHZZAdapterViewAdapter;
 import org.chzz.adapter.CHZZViewHolderHelper;
 import org.chzz.app.main.R;
-import org.chzz.app.main.model.bean.BaseModel;
+import org.chzz.app.main.model.bean.BaseEntity;
 import org.chzz.app.main.model.bean.RefreshModels;
 
 import java.util.ArrayList;
@@ -20,7 +20,7 @@ import cn.bingoogolapple.swipeitemlayout.BGASwipeItemLayout;
  * 创建时间:15/5/21 上午12:39
  * 描述:
  */
-public class SwipeAdapterViewAdapter<T extends BaseModel> extends CHZZAdapterViewAdapter<T> {
+public class SwipeAdapterViewAdapter<T extends BaseEntity> extends CHZZAdapterViewAdapter<T> {
     /**
      * 当前处于打开状态的item
      */

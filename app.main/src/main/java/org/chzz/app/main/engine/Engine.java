@@ -4,7 +4,7 @@ package org.chzz.app.main.engine;
 
 import org.chzz.app.main.model.bean.BannerModel;
 import org.chzz.app.main.model.bean.LoginEntity;
-import org.chzz.app.main.model.bean.RefreshModel;
+import org.chzz.app.main.model.bean.RefreshEntity;
 import org.chzz.app.main.model.bean.RefreshModels;
 import org.chzz.app.main.model.bean.StaggeredModel;
 
@@ -12,13 +12,11 @@ import java.util.List;
 import java.util.Map;
 
 import retrofit2.Call;
-import retrofit2.http.Body;
 import retrofit2.http.FieldMap;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
 import retrofit2.http.Path;
-import retrofit2.http.QueryMap;
 
 /**
  * 作者:copy 邮件:2499551993@qq.com
@@ -31,13 +29,13 @@ public interface Engine {
     @POST("srts/system/user/login")
     Call<LoginEntity> loadTestData(@FieldMap Map<String, String> params);
     @GET("refreshlayout/api/defaultdata6.json")
-    Call<List<RefreshModel>> loadInitDatas();
+    Call<List<RefreshEntity>> loadInitDatas();
 
     @GET("refreshlayout/newdata{pageNumber}.txt")
     Call<RefreshModels> loadNewData(@Path("pageNumber") int pageNumber);
 
     @GET("refreshlayout/api/moredata{pageNumber}.json")
-    Call<List<RefreshModel>> loadMoreData(@Path("pageNumber") int pageNumber);
+    Call<List<RefreshEntity>> loadMoreData(@Path("pageNumber") int pageNumber);
 
     @GET("refreshlayout/api/staggered_default.json")
     Call<List<StaggeredModel>> loadDefaultStaggeredData();

@@ -6,7 +6,7 @@ import android.support.v7.widget.RecyclerView;
 import org.chzz.adapter.CHZZRecyclerViewAdapter;
 import org.chzz.adapter.CHZZViewHolderHelper;
 import org.chzz.app.main.engine.FillDataListener;
-import org.chzz.app.main.model.bean.BaseModel;
+import org.chzz.app.main.model.bean.BaseEntity;
 
 /**
  * ============================================================
@@ -18,7 +18,7 @@ import org.chzz.app.main.model.bean.BaseModel;
  * 修订历史 ：
  * ============================================================
  **/
-public class NormalRecyclerViewAdapter<T extends BaseModel> extends CHZZRecyclerViewAdapter<T> {
+public class NormalRecyclerViewAdapter<T extends BaseEntity> extends CHZZRecyclerViewAdapter<T> {
     private Context context;
     private FillDataListener iFillDataListener;
 

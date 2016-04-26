@@ -2,10 +2,8 @@ package org.chzz.app.main.engine;
 
 import android.util.Log;
 
-import org.chzz.app.main.model.bean.BaseModel;
-import org.chzz.app.main.mvp.presenter.BaseListener;
+import org.chzz.app.main.model.bean.BaseEntity;
 import org.chzz.app.main.presenter.listener.OnDataListener;
-import org.chzz.app.main.ui.activity.BaseActivity;
 import org.chzz.app.main.utlis.GsonTools;
 import org.chzz.app.main.utlis.ToastUtil;
 
@@ -16,11 +14,15 @@ import retrofit2.Response;
 /**
  * Created by copy on 2016/4/23.
  */
-public class DataCallback<T extends BaseModel> implements Callback<T> {
+public class DataCallback<T extends BaseEntity> implements Callback<T> {
     private OnDataListener mOnDataListener;
     private int code;
     private Class<T> clazz;
     private String mName;
+
+    public DataCallback(OnDataListener baseListener) {
+        this.mOnDataListener = baseListener;
+    }
 
     public DataCallback(OnDataListener onDataListener, int code) {
         this.mOnDataListener = onDataListener;
@@ -34,9 +36,6 @@ public class DataCallback<T extends BaseModel> implements Callback<T> {
         this.mName = name;
     }
 
-    public DataCallback(OnDataListener baseListener) {
-        this.mOnDataListener = baseListener;
-    }
 
     @Override
     public void onResponse(Call<T> call, Response<T> response) {

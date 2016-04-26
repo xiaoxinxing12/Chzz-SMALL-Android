@@ -7,17 +7,15 @@ import android.widget.LinearLayout;
 
 import org.chzz.adapter.CHZZViewHolderHelper;
 import org.chzz.app.main.R;
-import org.chzz.app.main.adapter.NormalAdapterViewAdapter;
 import org.chzz.app.main.adapter.NormalRecyclerViewAdapter;
 import org.chzz.app.main.engine.DataEngine;
 import org.chzz.app.main.engine.FillDataListener;
-import org.chzz.app.main.model.bean.BaseModel;
+import org.chzz.app.main.model.bean.BaseEntity;
 import org.chzz.app.main.model.bean.RefreshModels;
 import org.chzz.app.main.presenter.IndexPresenter;
 import org.chzz.app.main.presenter.impl.IndexPresenterImpl;
 import org.chzz.app.main.ui.listener.IndexView;
 import org.chzz.app.main.widget.FullyGridLayoutManager;
-import org.chzz.app.main.widget.NoScrollGridView;
 import org.chzz.refresh.CHZZMeiTuanRefreshViewHolder;
 import org.chzz.refresh.CHZZRefreshLayout;
 
@@ -96,13 +94,13 @@ public class IndexFragment extends BaseFragment implements CHZZRefreshLayout.BGA
     }
 
     @Override
-    public void setFillDataListener(CHZZViewHolderHelper chzzViewHolderHelper, int i, BaseModel baseModel) {
+    public void setFillDataListener(CHZZViewHolderHelper chzzViewHolderHelper, int i, BaseEntity baseModel) {
         RefreshModels.DataBean dataBean = (RefreshModels.DataBean) baseModel;
 
     }
 
     @Override
-    public void hotDataResult(BaseModel model) {
+    public void hotDataResult(BaseEntity model) {
         RefreshModels models = (RefreshModels) model;
         mAdapterHot.setDatas(models.getData().subList(0,4));
     }

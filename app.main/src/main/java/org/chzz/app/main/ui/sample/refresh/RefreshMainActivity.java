@@ -11,7 +11,7 @@ import org.chzz.adapter.CHZZViewHolderHelper;
 import org.chzz.app.main.R;
 import org.chzz.app.main.adapter.NormalRecyclerViewAdapter;
 import org.chzz.app.main.engine.FillDataListener;
-import org.chzz.app.main.model.bean.BaseModel;
+import org.chzz.app.main.model.bean.BaseEntity;
 import org.chzz.app.main.ui.activity.BaseActivity;
 import org.chzz.app.main.utlis.ConstantValues;
 import org.chzz.app.main.utlis.ThreadUtil;
@@ -117,7 +117,7 @@ public class RefreshMainActivity extends BaseActivity implements CHZZRefreshLayo
     }
 
     @Override
-    public void setFillDataListener(CHZZViewHolderHelper chzzViewHolderHelper, int i, BaseModel t) {
+    public void setFillDataListener(CHZZViewHolderHelper chzzViewHolderHelper, int i, BaseEntity t) {
         super.setFillDataListener(chzzViewHolderHelper, i, t);
     }
 

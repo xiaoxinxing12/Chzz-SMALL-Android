@@ -2,6 +2,7 @@ package org.chzz;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 
 import net.wequick.small.Small;
 
@@ -23,6 +24,7 @@ public class LaunchActivity extends AppCompatActivity {
             @Override
             public void onComplete() {
                 Small.openUri("main", LaunchActivity.this);
+                Log.i("main", "onStart()");
                 finish();
             }
         });

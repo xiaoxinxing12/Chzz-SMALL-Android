@@ -3,8 +3,6 @@ package org.chzz.app.main.engine;
 import android.content.Context;
 import android.util.Log;
 
-import org.chzz.app.main.utlis.GsonTools;
-
 import java.io.IOException;
 
 import okhttp3.Interceptor;
@@ -31,7 +29,7 @@ public class CookiesInterceptor implements Interceptor {
        // CookieUtil.saveCookies(response.headers(), context);
        // Log.i("header",request.body()+"");
         Log.i("header",request.url()+"");
-        Log.i("header", response.body()+"");
+       // Log.i("header", response.body()+"");
 
         return response;
     }

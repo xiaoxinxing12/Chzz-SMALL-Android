@@ -3,7 +3,7 @@ package org.chzz.app.main.model.bean;
 /**
  * Created by copy on 2016/4/25.
  */
-public class LoginEntity extends BaseModel {
+public class LoginEntity extends BaseEntity {
 
     /**
      * code : 0

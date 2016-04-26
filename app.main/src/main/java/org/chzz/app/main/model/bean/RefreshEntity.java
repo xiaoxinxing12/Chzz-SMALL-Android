@@ -5,14 +5,14 @@ package org.chzz.app.main.model.bean;
  * 创建时间:15/5/21 14:53
  * 描述:
  */
-public class RefreshModel extends BaseModel {
+public class RefreshEntity extends BaseEntity {
     public String title;
     public String detail;
 
-    public RefreshModel() {
+    public RefreshEntity() {
     }
 
-    public RefreshModel(String title, String detail) {
+    public RefreshEntity(String title, String detail) {
         this.title = title;
         this.detail = detail;
     }

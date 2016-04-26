@@ -5,7 +5,6 @@
       <module fileurl="file://$PROJECT_DIR$/Chzz-SMALL-Android.iml" filepath="$PROJECT_DIR$/Chzz-SMALL-Android.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/app.main/app.main.iml" filepath="$PROJECT_DIR$/app.main/app.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/lib.utils/lib.utils.iml" filepath="$PROJECT_DIR$/lib.utils/lib.utils.iml" />
     </modules>
   </component>
 </project>

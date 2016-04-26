@@ -5,7 +5,7 @@ import java.util.List;
 /**
  * Created by copy on 2016/4/24.
  */
-public class RefreshModels extends BaseModel {
+public class RefreshModels extends BaseEntity {
 
 
     /**
@@ -23,7 +23,7 @@ public class RefreshModels extends BaseModel {
         this.data = data;
     }
 
-    public static class DataBean extends BaseModel {
+    public static class DataBean extends BaseEntity {
         private String detail;
         private String title;
 

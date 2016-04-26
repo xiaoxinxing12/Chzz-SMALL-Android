@@ -1,21 +1,21 @@
 package org.chzz.app.main.presenter.impl;
 
-import android.util.Log;
-
 import org.chzz.app.main.model.LoginModel;
-import org.chzz.app.main.model.bean.BaseModel;
+import org.chzz.app.main.model.bean.BaseEntity;
 import org.chzz.app.main.model.bean.LoginEntity;
 import org.chzz.app.main.model.impl.LoginModelImpl;
 import org.chzz.app.main.presenter.LoginPresenter;
 import org.chzz.app.main.presenter.listener.OnDataListener;
 import org.chzz.app.main.ui.listener.LoginView;
-import org.chzz.app.main.utlis.GsonTools;
 
 import java.util.Map;
+
+import dagger.Module;
 
 /**
  * Created by copy on 2016/4/25.
  */
+@Module
 public class LoginPresenterImpl implements LoginPresenter, OnDataListener {
     private LoginView mLoginView;
     private LoginModel mLoginModel;
@@ -31,7 +31,7 @@ public class LoginPresenterImpl implements LoginPresenter, OnDataListener {
     }
 
     @Override
-    public void result(BaseModel model, int code) {
+    public void result(BaseEntity model, int code) {
         switch (code) {
             case 0:
                 LoginEntity bean = (LoginEntity) model;

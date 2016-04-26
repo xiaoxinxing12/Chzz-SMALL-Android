@@ -10,7 +10,7 @@ package org.chzz.app.main.model.bean;
  * 修订历史 ：
  * ============================================================
  **/
-public class BaseModel {
+public class BaseEntity {
 
     protected String info;
     protected int status;

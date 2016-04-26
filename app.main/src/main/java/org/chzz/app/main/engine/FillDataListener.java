@@ -1,7 +1,7 @@
 package org.chzz.app.main.engine;
 
 import org.chzz.adapter.CHZZViewHolderHelper;
-import org.chzz.app.main.model.bean.BaseModel;
+import org.chzz.app.main.model.bean.BaseEntity;
 
 /**
  * ============================================================
@@ -14,7 +14,7 @@ import org.chzz.app.main.model.bean.BaseModel;
  * ============================================================
  **/
 public interface FillDataListener {
-    public void setFillDataListener(CHZZViewHolderHelper chzzViewHolderHelper, int i, BaseModel baseModel);
+    public void setFillDataListener(CHZZViewHolderHelper chzzViewHolderHelper, int i, BaseEntity baseModel);
 
 
 }
