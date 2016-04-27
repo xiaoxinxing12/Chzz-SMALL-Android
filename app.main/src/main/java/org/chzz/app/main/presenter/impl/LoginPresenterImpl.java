@@ -10,8 +10,6 @@ import org.chzz.app.main.ui.listener.LoginView;
 
 import java.util.Map;
 
-
-
 /**
  * Created by copy on 2016/4/25.
  */
