@@ -2,14 +2,14 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 xmlns:tools="http://schemas.android.com/tools"
                 android:layout_width="match_parent"
+                android:background="@mipmap/launch_bg"
                 android:layout_height="match_parent"
-                android:paddingBottom="@dimen/activity_vertical_margin"
-                android:paddingLeft="@dimen/activity_horizontal_margin"
-                android:paddingRight="@dimen/activity_horizontal_margin"
-                android:paddingTop="@dimen/activity_vertical_margin"
+                android:clipToPadding="true"
+                android:fitsSystemWindows="false"
                 tools:context=".LaunchActivity">
 
     <ProgressBar
+        android:layout_alignParentBottom="true"
         android:id="@+id/pb_progressbar"
         style="@style/StyleProgressBarMini"
         android:layout_width="fill_parent"
