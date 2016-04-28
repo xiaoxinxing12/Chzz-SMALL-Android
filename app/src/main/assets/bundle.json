@@ -2,10 +2,6 @@
   "version": "1.0.0",
   "bundles": [
     {
-      "uri": "lib.utils",
-      "pkg": "org.chzz.lib.utils"
-    },
-    {
       "uri": "main",
       "pkg": "org.chzz.app.main"
     }

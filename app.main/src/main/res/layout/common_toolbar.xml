@@ -15,10 +15,10 @@
         android:orientation="vertical"></LinearLayout>
 
     <android.support.v7.widget.Toolbar
+        android:background="@color/colorPrimary"
         android:id="@+id/toolbar"
         style="@style/MatchWrap"
         android:layout_gravity="center"
-        android:background="?attr/colorPrimary"
         android:minHeight="?attr/actionBarSize"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
         <TextView

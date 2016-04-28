@@ -1,7 +1,5 @@
 package org.chzz.app.main.ui.activity;
 
-import android.annotation.TargetApi;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.widget.Toolbar;
@@ -21,7 +19,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends BaseViewPageActivity {
     //标题
-    private String[] mTitles = {"首页", "热门", "分类", "我的"};
+    private String[] mTitles = {"首页6", "热门", "分类", "我的"};
     private int[] mLogo = {R.mipmap.logo_index, R.mipmap.logo_hot, R.mipmap.logo_category, R.mipmap.logo_my};
     //默认图标
     private int[] mIconUnselectIds = {R.mipmap.tab_home_unselect, R.mipmap.tab_speech_unselect, R.mipmap.ic_tab_category_normal, R.mipmap.tab_contact_unselect};
@@ -47,14 +45,13 @@ public class MainActivity extends BaseViewPageActivity {
         mTitle = getViewById(R.id.tv_title);
         mToolbarTop = getViewById(R.id.toolbar_top);
         if (setTranslucentStatus)
-            mToolbarTop.setVisibility(View.VISIBLE);
+          mToolbarTop.setVisibility(View.VISIBLE);
         for (int i = 0; i < mTitles.length; i++) {
             mTabEntities.add(new TabEntity(mTitles[i], mIconSelectIds[i], mIconUnselectIds[i]));
         }
         mNormalViewPageAdapter = new NormalViewPageAdapter(getSupportFragmentManager(), mTitles);
     }
 
-    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void setListener() {
         mViewPage.setAdapter(mNormalViewPageAdapter);

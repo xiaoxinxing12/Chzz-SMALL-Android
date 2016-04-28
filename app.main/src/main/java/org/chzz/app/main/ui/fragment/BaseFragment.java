@@ -66,6 +66,7 @@ public abstract class BaseFragment extends Fragment {
                 parent.removeView(mContentView);
             }
         }
+        //TextView t = new TextView(getActivity());
         return mContentView;
     }
 

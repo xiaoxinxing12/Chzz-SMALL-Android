@@ -14,7 +14,7 @@
         android:id="@+id/action_share"
         android:icon="@mipmap/actionbar_message"
         android:orderInCategory="90"
-        android:title="11"
+        android:title=""
         app:showAsAction="ifRoom" />
 
 </menu>

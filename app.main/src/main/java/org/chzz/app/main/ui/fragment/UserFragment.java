@@ -5,14 +5,13 @@ import android.os.Bundle;
 import com.bumptech.glide.Glide;
 
 import org.chzz.app.main.R;
-
-import cn.bingoogolapple.imageview.BGAImageView;
+import org.chzz.imageview.ChzzImageView;
 
 /**
  * Created by copy on 2016/4/26.
  */
 public class UserFragment extends BaseFragment {
-    private BGAImageView mHead;
+    private ChzzImageView mHead;
 
     @Override
     protected void initView(Bundle savedInstanceState) {

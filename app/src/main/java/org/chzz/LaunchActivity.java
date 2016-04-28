@@ -23,7 +23,7 @@ public class LaunchActivity extends AppCompatActivity {
 
             @Override
             public void onComplete() {
-                Small.openUri("main", LaunchActivity.this);
+               Small.openUri("main", LaunchActivity.this);
                 Log.i("main", "onStart()");
                 finish();
             }

@@ -22,7 +22,10 @@
         Base application theme, dependent on API level. This theme is replaced
         by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
     -->
-
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
     <style name="FullBleedTheme" parent="android:Theme.Light.NoTitleBar">
         <!--  All customizations that are NOT specific to a particular API-level can go here.-->
 
