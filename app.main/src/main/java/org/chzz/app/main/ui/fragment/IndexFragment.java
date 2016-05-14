@@ -57,6 +57,7 @@ public class IndexFragment extends BaseFragment implements CHZZRefreshLayout.BGA
         mGvHot.setAdapter(mAdapterHot);
     }
 
+
     @Override
     protected void processLogic(Bundle savedInstanceState) {
         CHZZMeiTuanRefreshViewHolder meiTuanRefreshViewHolder = new CHZZMeiTuanRefreshViewHolder(mApp, false);

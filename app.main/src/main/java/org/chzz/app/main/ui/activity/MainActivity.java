@@ -34,7 +34,6 @@ public class MainActivity extends BaseViewPageActivity {
     private ViewPager mViewPage;
 
     private NormalViewPageAdapter mNormalViewPageAdapter;
-
     @Override
     protected void initView(Bundle savedInstanceState) {
         setContentView(R.layout.activity_main);
@@ -69,7 +68,6 @@ public class MainActivity extends BaseViewPageActivity {
     protected void onUserVisible() {
 
     }
-
     @Override
     protected void processLogic(Bundle savedInstanceState) {
 
@@ -163,5 +161,4 @@ public class MainActivity extends BaseViewPageActivity {
         }
         return super.onKeyDown(keyCode, event);
     }
-
 }
